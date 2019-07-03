@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{516638C3-B68C-4563-BC4F-9D41073EF39E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Chinook</RootNamespace>
+    <AssemblyName>Chinook</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CompositionControls\CheckableComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CompositionControls\CheckableComboBox.Designer.cs">
+      <DependentUpon>CheckableComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CompositionControls\CheckableNumericUpDown.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CompositionControls\CheckableNumericUpDown.Designer.cs">
+      <DependentUpon>CheckableNumericUpDown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CompositionControls\NullableComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CompositionControls\NullableComboBox.Designer.cs">
+      <DependentUpon>NullableComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AlbumListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\AlbumListControl.Designer.cs">
+      <DependentUpon>AlbumListControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AlbumSearchControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\AlbumSearchControl.Designer.cs">
+      <DependentUpon>AlbumSearchControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\InvoiceListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\InvoiceListControl.Designer.cs">
+      <DependentUpon>InvoiceListControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\InvoiceSearchControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\InvoiceSearchControl.Designer.cs">
+      <DependentUpon>InvoiceSearchControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TrackListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TrackListControl.Designer.cs">
+      <DependentUpon>TrackListControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TrackSearchControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TrackSearchControl.Designer.cs">
+      <DependentUpon>TrackSearchControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AlbumListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AlbumListForm.Designer.cs">
+      <DependentUpon>AlbumListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ArtistListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ArtistListForm.Designer.cs">
+      <DependentUpon>ArtistListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InvoiceListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InvoiceListForm.Designer.cs">
+      <DependentUpon>InvoiceListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TrackListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TrackListForm.Designer.cs">
+      <DependentUpon>TrackListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CompositionControls\CheckableComboBox.resx">
+      <DependentUpon>CheckableComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompositionControls\CheckableNumericUpDown.resx">
+      <DependentUpon>CheckableNumericUpDown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompositionControls\NullableComboBox.resx">
+      <DependentUpon>NullableComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\AlbumListControl.resx">
+      <DependentUpon>AlbumListControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\AlbumSearchControl.resx">
+      <DependentUpon>AlbumSearchControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\InvoiceListControl.resx">
+      <DependentUpon>InvoiceListControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\InvoiceSearchControl.resx">
+      <DependentUpon>InvoiceSearchControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TrackListControl.resx">
+      <DependentUpon>TrackListControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TrackSearchControl.resx">
+      <DependentUpon>TrackSearchControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AlbumListForm.resx">
+      <DependentUpon>AlbumListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ArtistListForm.resx">
+      <DependentUpon>ArtistListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InvoiceListForm.resx">
+      <DependentUpon>InvoiceListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TrackListForm.resx">
+      <DependentUpon>TrackListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Chinook.Data.Album.datasource" />
+    <None Include="Properties\DataSources\Chinook.Data.Artist.datasource" />
+    <None Include="Properties\DataSources\Chinook.Data.Invoice.datasource" />
+    <None Include="Properties\DataSources\Chinook.Data.Track.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Utilities\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Chinook.Data\Chinook.Data.csproj">
+      <Project>{0E52172A-E2B6-4ACE-A83C-51AED6242FCF}</Project>
+      <Name>Chinook.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
